@@ -954,7 +954,7 @@ visible = false
 color = Color(0.13, 0.13, 0.13, 1)
 
 [node name="Bench" parent="." instance=ExtResource("13_1fgkh")]
-position = Vector2(422, 48)
+position = Vector2(422, 49)
 
 [node name="Chest" parent="." instance=ExtResource("14_hd8f4")]
 position = Vector2(381, 56)
@@ -1002,7 +1002,7 @@ position = Vector2(23, 1)
 position = Vector2(23, 1)
 
 [node name="NPC" parent="Doors/E" instance=ExtResource("18_31phq")]
-position = Vector2(-630, -78)
+position = Vector2(-630, -77)
 
 [editable path="Doors/W"]
 [editable path="Doors/E"]

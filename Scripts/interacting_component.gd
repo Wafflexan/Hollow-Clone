@@ -3,46 +3,38 @@ extends Node2D
 @onready var interact_label: Label = $InteractLabel
 var current_interactions := []
 var can_interact := true
-var interact_cooldown := 0.4  # seconds between interactions
-var interact_buffer := false  # prevents spam when holding stick
-var joystick_threshold := -0.9  # how far up you need to tilt to trigger
+var interact_cooldown := 0.4
+var interact_buffer := false
+var joystick_threshold := -0.9
 var last_highlighted: Area2D = null
 
 
 func _process(_delta: float) -> void:
-	# Handle joystick-based interact (like Hollow Knight)
 	var joy_y = Input.get_action_strength("up")
 
 	if joy_y < joystick_threshold and !interact_buffer and can_interact:
 		_interact_action()
 		interact_buffer = true
 	elif joy_y > -0.2:
-		# Reset buffer when stick returns to neutral
 		interact_buffer = false
 
-	# Label handling
 	if current_interactions and can_interact:
 		current_interactions.sort_custom(_sort_by_nearest)
 		var focused = current_interactions[0]
 
-		# If the focused interactable changed, update highlighting
 		if focused != last_highlighted:
-			# turn off old highlight
 			if last_highlighted and last_highlighted.has_method("set_highlighted"):
 				last_highlighted.set_highlighted(false)
 
-			# turn on new highlight
 			if focused.has_method("set_highlighted"):
 				focused.set_highlighted(true)
 
 			last_highlighted = focused
 
-		# show label
 		if focused.is_interactable:
 			interact_label.text = focused.interact_name
 			interact_label.show()
 	else:
-		# Hide label and remove any remaining highlight
 		if last_highlighted and last_highlighted.has_method("set_highlighted"):
 			last_highlighted.set_highlighted(false)
 		last_highlighted = null
