@@ -1,6 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://dpaaautu0me0m"]
+[gd_scene load_steps=29 format=3 uid="uid://dpaaautu0me0m"]
 
-[ext_resource type="Texture2D" uid="uid://b2no6hg7xlyxj" path="res://Assets/Sprites/Owen Art/Archer.png" id="1_36kj3"]
+[ext_resource type="Texture2D" uid="uid://ir1mdsj8g0i2" path="res://Assets/Sprites/Owen Art/Archer.png" id="1_36kj3"]
 [ext_resource type="Shader" uid="uid://b6vfdfnsqggom" path="res://Shaders/erosion.gdshader" id="1_a6nm7"]
 [ext_resource type="Texture2D" uid="uid://b0myllnqt4i71" path="res://Assets/Sprites/Noise.png" id="2_7qwat"]
 [ext_resource type="Script" uid="uid://bplboi0faltus" path="res://Scripts/archer.gd" id="3_mticn"]
@@ -20,56 +20,64 @@ shader = ExtResource("4_7qwat")
 shader_parameter/enabled = false
 shader_parameter/tint = Color(1, 1, 1, 1)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_quixy"]
-atlas = ExtResource("1_36kj3")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0mkx7"]
-atlas = ExtResource("1_36kj3")
-region = Rect2(80, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a6nm7"]
-atlas = ExtResource("1_36kj3")
-region = Rect2(96, 0, 16, 16)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_7qwat"]
 atlas = ExtResource("1_36kj3")
-region = Rect2(112, 0, 16, 16)
+region = Rect2(72, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_al3at"]
+atlas = ExtResource("1_36kj3")
+region = Rect2(90, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xq7ed"]
+atlas = ExtResource("1_36kj3")
+region = Rect2(108, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dv6mx"]
+atlas = ExtResource("1_36kj3")
+region = Rect2(126, 0, 18, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mticn"]
 atlas = ExtResource("1_36kj3")
-region = Rect2(0, 0, 16, 16)
+region = Rect2(0, 0, 18, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_130ge"]
 atlas = ExtResource("1_36kj3")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q4q7k"]
-atlas = ExtResource("1_36kj3")
-region = Rect2(48, 0, 16, 16)
+region = Rect2(18, 0, 18, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tt8dr"]
 atlas = ExtResource("1_36kj3")
-region = Rect2(64, 0, 16, 16)
+region = Rect2(36, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4q7k"]
+atlas = ExtResource("1_36kj3")
+region = Rect2(54, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugnjc"]
+atlas = ExtResource("1_36kj3")
+region = Rect2(36, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20cwn"]
+atlas = ExtResource("1_36kj3")
+region = Rect2(72, 0, 18, 18)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_20cwn"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_quixy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0mkx7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a6nm7")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_7qwat")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_al3at")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xq7ed")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dv6mx")
 }],
 "loop": true,
 "name": &"Death",
-"speed": 3.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -84,14 +92,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_tt8dr")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_q4q7k")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tt8dr")
+"texture": SubResource("AtlasTexture_ugnjc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20cwn")
 }],
 "loop": true,
 "name": &"Walk",
-"speed": 2.0
+"speed": 4.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_36kj3"]
@@ -291,9 +305,9 @@ material = SubResource("ShaderMaterial_mticn")
 position = Vector2(-0.09999964, 0)
 scale = Vector2(1.0125, 1)
 sprite_frames = SubResource("SpriteFrames_20cwn")
-animation = &"Death"
-autoplay = "Idle"
-frame_progress = 0.2638187
+animation = &"Walk"
+autoplay = "Walk"
+frame_progress = 0.1892246
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
