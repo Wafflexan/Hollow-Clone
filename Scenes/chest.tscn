@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgjkmwpi7vjek"]
+[gd_scene load_steps=10 format=3 uid="uid://dgjkmwpi7vjek"]
 
 [ext_resource type="Script" uid="uid://tv6u7og32aoa" path="res://Scripts/chest.gd" id="1_bagqn"]
 [ext_resource type="Texture2D" uid="uid://bqoqttfwogig8" path="res://Assets/Sprites/Owen Art/Chest.png" id="1_cjfl1"]
 [ext_resource type="PackedScene" uid="uid://cyowr518ht03d" path="res://Scenes/interactable.tscn" id="2_bagqn"]
+[ext_resource type="Material" uid="uid://e2isui1nvh72" path="res://Shaders/outlineshader.tres" id="2_pmguq"]
+[ext_resource type="Texture2D" uid="uid://c6dw623ws475t" path="res://Assets/Sprites/Owen Art/Chest-export.png" id="3_dq33m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pmguq"]
 radius = 22.0
@@ -72,7 +74,8 @@ _data = {
 script = ExtResource("1_bagqn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_cjfl1")
+material = ExtResource("2_pmguq")
+texture = ExtResource("3_dq33m")
 hframes = 4
 
 [node name="Interactable" parent="." instance=ExtResource("2_bagqn")]

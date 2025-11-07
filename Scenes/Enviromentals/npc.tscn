@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c16nfgi37ki5h"]
+[gd_scene load_steps=7 format=3 uid="uid://c16nfgi37ki5h"]
 
 [ext_resource type="Script" uid="uid://dtvqlbvex6twd" path="res://Scripts/npc.gd" id="1_75555"]
 [ext_resource type="Texture2D" uid="uid://b2no6hg7xlyxj" path="res://Assets/Sprites/Owen Art/Archer.png" id="1_qmw48"]
 [ext_resource type="PackedScene" uid="uid://cyowr518ht03d" path="res://Scenes/interactable.tscn" id="2_75555"]
+[ext_resource type="Material" uid="uid://e2isui1nvh72" path="res://Shaders/outlineshader.tres" id="2_r3wxa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r3wxa"]
 radius = 3.0
@@ -18,6 +19,7 @@ script = ExtResource("1_75555")
 shape = SubResource("CapsuleShape2D_r3wxa")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("2_r3wxa")
 texture = ExtResource("1_qmw48")
 hframes = 8
 vframes = 2
