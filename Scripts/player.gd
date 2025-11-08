@@ -13,6 +13,7 @@ extends CharacterBody2D
 ## The four possible character states and the character's current state
 @onready var coin_label: Label = $"../Camera2D/Label"
 @onready var Focus_button = $"Menu's/PauseMenu/MainPauseMenu/PauseMenu_Box/Button_List/Resume"
+@onready var camera_2d: Camera2D = $"../Camera2D"
 
 signal healthChanged
 var knockback: Vector2 = Vector2.ZERO
@@ -516,6 +517,7 @@ func _on_invincibility_timer_timeout() -> void:
 
 func damage():
 	currentHealth -= 1
+	screen_shake()
 	SoundLibrary.play_random_hit()
 	hit_flash_animation_player.play("hit_flash")
 	healthChanged.emit(currentHealth)
@@ -583,6 +585,8 @@ func fade_label():
 	coin_label.modulate.a = 1.0
 	fade_tween.tween_property(coin_label, "modulate:a", 0.0, 1.0).set_delay(0.5)
 
+func screen_shake():
+	camera_2d.screen_shake(2, 0.3)
 
 func _on_resume_timer_2_timeout() -> void:
 	Global.talking = false
