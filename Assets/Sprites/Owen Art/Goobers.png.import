@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://firf1k7kqhgi"
-path="res://.godot/imported/Blue Rock.png-b55fd8e0b44cec1a7e94bc13de77f1f8.ctex"
+uid="uid://clqabuqgn0arh"
+path="res://.godot/imported/Goobers.png-41db83e4a98bf12f06991c104e555cbc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Stringstar Fields/Blue Rock.png"
-dest_files=["res://.godot/imported/Blue Rock.png-b55fd8e0b44cec1a7e94bc13de77f1f8.ctex"]
+source_file="res://Assets/Sprites/Owen Art/Goobers.png"
+dest_files=["res://.godot/imported/Goobers.png-41db83e4a98bf12f06991c104e555cbc.ctex"]
 
 [params]
 
