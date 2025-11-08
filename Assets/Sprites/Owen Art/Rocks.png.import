@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clqabuqgn0arh"
-path="res://.godot/imported/Goobers.png-5a0b24843de9078bdfd0f843fa7667ac.ctex"
+uid="uid://gmhya21xlrrd"
+path="res://.godot/imported/Rocks.png-32c178f3a93b06182eb14e2bc8c8a2d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Stringstar Fields/Goobers.png"
-dest_files=["res://.godot/imported/Goobers.png-5a0b24843de9078bdfd0f843fa7667ac.ctex"]
+source_file="res://Assets/Sprites/Owen Art/Rocks.png"
+dest_files=["res://.godot/imported/Rocks.png-32c178f3a93b06182eb14e2bc8c8a2d8.ctex"]
 
 [params]
 

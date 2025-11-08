@@ -945,6 +945,7 @@ position = Vector2(-611, 45)
 position = Vector2(-104, -61)
 
 [node name="Archer" parent="Enemies" instance=ExtResource("11_i7ma5")]
+z_index = 1
 position = Vector2(492.99994, -229)
 
 [node name="Flying_enemy" parent="Enemies" instance=ExtResource("12_t8afp")]
