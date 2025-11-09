@@ -156,6 +156,7 @@ locale/translations_pot_files=PackedStringArray("res://Dialogue/dialogue.dialogu
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+viewport/hdr_2d=true
 environment/defaults/default_clear_color=Color(0.20392157, 0.20784314, 0.36862746, 1)
 renderer/canvas_textures/default_texture_filter=1
 renderer/main_scene="uid://bycbvvxvjb035"
