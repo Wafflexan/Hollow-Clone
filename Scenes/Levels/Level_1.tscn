@@ -984,11 +984,29 @@ destination_level_tag = "level_2"
 destination_door_tag = "E"
 spawn_direction = "right"
 
+[node name="CollisionShape2D" parent="Doors/W" index="0"]
+position = Vector2(0, -7)
+
 [node name="Spawn" parent="Doors/W" index="1"]
 position = Vector2(22, 1)
 
 [node name="spawn_1" type="Marker2D" parent="Doors/W"]
 position = Vector2(22, 1)
+
+[node name="W2" parent="Doors" instance=ExtResource("17_k1rx4")]
+position = Vector2(-223, 54)
+destination_level_tag = "f1"
+destination_door_tag = "E2"
+spawn_direction = "right"
+
+[node name="CollisionShape2D" parent="Doors/W2" index="0"]
+position = Vector2(-538, 57)
+
+[node name="Spawn" parent="Doors/W2" index="1"]
+position = Vector2(-506, 62)
+
+[node name="spawn_2" type="Marker2D" parent="Doors/W2"]
+position = Vector2(-507, 62)
 
 [node name="E" parent="Doors" instance=ExtResource("17_k1rx4")]
 position = Vector2(458, 134)
@@ -1006,4 +1024,5 @@ position = Vector2(23, 1)
 position = Vector2(-630, -77)
 
 [editable path="Doors/W"]
+[editable path="Doors/W2"]
 [editable path="Doors/E"]
